@@ -37,6 +37,11 @@ noremap <C-DOWN> <C-w>j
 noremap <C-UP> <C-w>k
 noremap <C-RIGHT> <C-w>l
 
+nnoremap <M-Up> :resize +2<CR>
+nnoremap <M-Down> :resize -2<CR>
+nnoremap <M-Left> :vertical resize -2<CR>
+nnoremap <M-Right> :vertical resize +2<CR>
+
 filetype on
 filetype plugin on
 filetype indent on
