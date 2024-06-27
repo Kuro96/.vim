@@ -25,7 +25,7 @@ set nowritebackup
 " referenced from yueyoum/dotfiles with some personal touch
 set bs=indent,eol,start  " backspace
 set tf  " ttyfast
-set cc=79  " colorcolumn
+set cc=79,120  " colorcolumn
 set ts=4  " tabstop
 set sw=4  " shiftwidth
 set sts=4  " softtabstop
