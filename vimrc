@@ -235,4 +235,10 @@ function! s:syntax_query() abort
 endfunction
 command! SyntaxQuery call s:syntax_query()
 
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+
+autocmd BufNewFile,BufRead tmprc set filetype=vim
+source $HOME/.vim/tmprc
+
 " vim:ai:et:ts=4:sw=4:sts=4:ff=unix:
