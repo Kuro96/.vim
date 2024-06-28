@@ -56,6 +56,7 @@ autocmd FileType scss set ai et ts=2 sw=2 sts=2
 autocmd FileType java set ai et
 autocmd FileType tex set ai et ts=2 sw=2 sts=2
 autocmd FileType bib set ai et ts=2 sw=2 sts=2
+autocmd FileType gitconfig setlocal noet
 
 colorscheme monokai
 
