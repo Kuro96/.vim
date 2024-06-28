@@ -68,12 +68,6 @@ set list lcs=tab:→\ ,trail:·,extends:❯,precedes:❮
 " vim-airline
 let g:airline_theme='base16_monokai'
 
-" Copilot
-let g:copilot_proxy = 'http://127.0.0.1:1081'
-"let g:copilot_no_tab_map = v:true
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-autocmd BufRead,BufNewFile lt*.py Copilot disable
-
 " COC
 set nobackup
 set nowritebackup
