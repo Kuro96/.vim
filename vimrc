@@ -238,7 +238,10 @@ command! SyntaxQuery call s:syntax_query()
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
 
+" tmp vimscripts
+if filereadable(expand('~/.vim/tmprc'))
 autocmd BufNewFile,BufRead tmprc set filetype=vim
 source $HOME/.vim/tmprc
+endif
 
 " vim:ai:et:ts=4:sw=4:sts=4:ff=unix:
