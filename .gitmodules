@@ -16,3 +16,6 @@
 [submodule "pack/vendor/start/vim-airline-themes"]
 	path = pack/vendor/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/vendor/start/ctrlp.vim"]
+	path = pack/vendor/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
