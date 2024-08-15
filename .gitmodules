@@ -19,3 +19,6 @@
 [submodule "pack/vendor/start/ctrlp.vim"]
 	path = pack/vendor/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
+[submodule "pack/vendor/start/vim-ai"]
+	path = pack/vendor/start/vim-ai
+	url = https://github.com/madox2/vim-ai
