@@ -25,3 +25,6 @@
 [submodule "pack/vendor/start/vim-fugitive"]
 	path = pack/vendor/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "colors/vim-sublime-monokai"]
+	path = colors/vim-sublime-monokai
+	url = https://github.com/ErichDonGubler/vim-sublime-monokai.git

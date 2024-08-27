@@ -68,7 +68,7 @@ autocmd FileType python setl foldmethod=indent
 autocmd BufEnter *.cpp,*.c,*.h nnoremap <silent> <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.c$,.h,:s,.X123X$,.cpp,<CR>
 
 " Color Scheme
-colorscheme monokai
+colorscheme vim-sublime-monokai/colors/sublimemonokai
 
 " Custom Functions
 function! s:syntax_query() abort
