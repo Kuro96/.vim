@@ -28,3 +28,6 @@
 [submodule "colors/vim-sublime-monokai"]
 	path = colors/vim-sublime-monokai
 	url = https://github.com/ErichDonGubler/vim-sublime-monokai.git
+[submodule "pack/vendor/start/vim-javascript"]
+	path = pack/vendor/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
