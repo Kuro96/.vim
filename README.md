@@ -15,7 +15,7 @@ cd pack/vendor/start/coc.nvim
 npm ci
 ```
 
-- `:CocInstall coc-pyright coc-markdownlint coc-json coc-git coc-sh coc-webview coc-markdown-preview-enhanced`
+- `:CocInstall coc-pyright coc-markdownlint coc-json coc-git coc-sh coc-yaml coc-toml coc-tsserver coc-webview coc-markdown-preview-enhanced`
 
 ## 更新插件
 

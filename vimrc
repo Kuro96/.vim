@@ -14,7 +14,7 @@ syntax sync minlines=256
 set t_Co=256
 
 " Folding Settings
-set foldmethod=marker
+set foldmethod=syntax
 set foldlevelstart=99
 
 " File Writing Settings
@@ -55,6 +55,7 @@ autocmd FileType html set ai et ts=2 sw=2 sts=2
 autocmd FileType json set ai et ts=2 sw=2 sts=2 foldmethod=indent
 autocmd FileType yaml set ai et ts=2 sw=2 sts=2 foldmethod=indent
 autocmd FileType javascript set ai et ts=2 sw=2 sts=2
+autocmd FileType typescript set ai et ts=2 sw=2 sts=2
 autocmd FileType css set ai et ts=2 sw=2 sts=2
 autocmd FileType scss set ai et ts=2 sw=2 sts=2
 autocmd FileType java set ai et
