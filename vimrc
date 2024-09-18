@@ -62,7 +62,7 @@ autocmd FileType java set ai et
 autocmd FileType python set foldmethod=indent
 autocmd FileType tex set ai et ts=2 sw=2 sts=2
 autocmd FileType bib set ai et ts=2 sw=2 sts=2
-autocmd FileType gitconfig setl noet
+autocmd FileType gitconfig set noet
 
 " Enable automatic header/source switching
 autocmd BufEnter *.cpp,*.c,*.h nnoremap <silent> <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.c$,.h,:s,.X123X$,.cpp,<CR>
