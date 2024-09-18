@@ -59,11 +59,10 @@ autocmd FileType typescript set ai et ts=2 sw=2 sts=2
 autocmd FileType css set ai et ts=2 sw=2 sts=2
 autocmd FileType scss set ai et ts=2 sw=2 sts=2
 autocmd FileType java set ai et
-autocmd FileType python setlocal foldmethod=indent
+autocmd FileType python set foldmethod=indent
 autocmd FileType tex set ai et ts=2 sw=2 sts=2
 autocmd FileType bib set ai et ts=2 sw=2 sts=2
 autocmd FileType gitconfig setl noet
-autocmd FileType python setl foldmethod=indent
 
 " Enable automatic header/source switching
 autocmd BufEnter *.cpp,*.c,*.h nnoremap <silent> <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.c$,.h,:s,.X123X$,.cpp,<CR>
