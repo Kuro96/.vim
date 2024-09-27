@@ -47,6 +47,10 @@ nnoremap <M-Down> :resize -2<CR>
 nnoremap <M-Left> :vertical resize -2<CR>
 nnoremap <M-Right> :vertical resize +2<CR>
 
+" Shortcut for <ESC>
+inoremap fd <esc>
+vnoremap fd <esc>
+
 " FileType Specific Settings
 filetype on
 filetype plugin on
@@ -72,6 +76,9 @@ autocmd BufEnter *.cpp,*.c,*.h nnoremap <silent> <F4> :e %:p:s,.h$,.X123X,:s,.cp
 
 " Color Scheme
 colorscheme monokai
+if has("termguicolors")
+    set termguicolors
+endif
 
 " Custom Functions
 function! s:syntax_query() abort
