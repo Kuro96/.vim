@@ -13,6 +13,9 @@ set updatetime=300
 syntax sync minlines=256
 set t_Co=256
 
+" GUI Font Settings
+set guifont=Fira\ Code\ 18
+
 " Folding Settings
 set foldmethod=syntax
 set foldlevelstart=99
