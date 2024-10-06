@@ -1,5 +1,6 @@
 {
   "hover.floatConfig": {"border": true, "rounded": true},
+  "javascript.preferGoToSourceDefinition": true,
   "markdown-preview-enhanced.previewTheme": "monokai.css",
   "pyright.inlayHints.functionReturnTypes": true,
   "pyright.inlayHints.parameterTypes": false,
@@ -7,5 +8,6 @@
   "pyright.organizeimports.provider": "ruff",
   "python.formatting.provider": "ruff",
   "python.linting.ruffEnabled": true,
-  "python.pythonPath": "~/.vim/python"
+  "python.pythonPath": "~/.vim/python",
+  "typescript.preferGoToSourceDefinition": true
 }
