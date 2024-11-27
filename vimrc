@@ -57,18 +57,17 @@ filetype plugin on
 filetype indent on
 syntax on
 
-autocmd FileType c,cpp set ai et cindent foldmethod=syntax
-autocmd FileType html set ai et ts=2 sw=2 sts=2
-autocmd FileType json set ai et ts=2 sw=2 sts=2 foldmethod=indent
-autocmd FileType yaml set ai et ts=2 sw=2 sts=2 foldmethod=indent
-autocmd FileType javascript set ai et ts=2 sw=2 sts=2
-autocmd FileType typescript set ai et ts=2 sw=2 sts=2
-autocmd FileType css set ai et ts=2 sw=2 sts=2
-autocmd FileType scss set ai et ts=2 sw=2 sts=2
-autocmd FileType java set ai et
+autocmd FileType c,cpp set cindent foldmethod=syntax
+autocmd FileType html set ts=2 sw=2 sts=2
+autocmd FileType json set ts=2 sw=2 sts=2 foldmethod=indent
+autocmd FileType yaml set ts=2 sw=2 sts=2 foldmethod=indent
+autocmd FileType javascript set ts=2 sw=2 sts=2
+autocmd FileType typescript set ts=2 sw=2 sts=2
+autocmd FileType css set ts=2 sw=2 sts=2
+autocmd FileType scss set ts=2 sw=2 sts=2
 autocmd FileType python set foldmethod=indent
-autocmd FileType tex set ai et ts=2 sw=2 sts=2
-autocmd FileType bib set ai et ts=2 sw=2 sts=2
+autocmd FileType tex set ts=2 sw=2 sts=2
+autocmd FileType bib set ts=2 sw=2 sts=2
 autocmd FileType gitconfig set noet
 
 " Enable automatic header/source switching

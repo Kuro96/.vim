@@ -1,6 +1,6 @@
 " Map <tab> for trigger completion, completion confirm, snippet expand and jump, jump outside closing bracket or other pairs of symbols like VSCode
 inoremap <silent><expr> <Tab>
-  \ coc#pum#visible() ? coc#_select_confirm() :
+  \ coc#pum#visible() ? coc#pum#next(1) :
   \ coc#expandableOrJumpable() ?
   \ "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
   \ NextCharIsPair() ? "\<Right>" :
