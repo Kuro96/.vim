@@ -89,6 +89,7 @@ command! SyntaxQuery call s:syntax_query()
 
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>" viw<esc>a"<esc>bi"<esc>lel
+nnoremap <leader>' viw<esc>a'<esc>bi'<esc>lel
 
 for f in globpath('~/.vim/vimrc.d', '*.vim', 0, 1)
     if filereadable(f)
