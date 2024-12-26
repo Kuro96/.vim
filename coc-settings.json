@@ -1,4 +1,8 @@
 {
+  "coc-ai.global.model": "deepseek-chat",
+  "coc-ai.global.endpointUrl": "https://api.deepseek.com/v1/chat/completions",
+  "coc-ai.global.tokenPath": "~/.vim/token",
+  "coc-ai.global.rolesConfigPath": "~/.vim/vimrc.d/coc-ai-roles.ini",
   "hover.floatConfig": {"border": true, "rounded": true},
   "javascript.preferGoToSourceDefinition": true,
   "markdown-preview-enhanced.previewTheme": "monokai.css",
