@@ -28,3 +28,6 @@
 [submodule "pack/vendor/start/python-syntax"]
 	path = pack/vendor/start/python-syntax
 	url = https://github.com/vim-python/python-syntax.git
+[submodule "pack/vendor/start/vim-c-cpp-modern"]
+	path = pack/vendor/start/vim-c-cpp-modern
+	url = https://github.com/bfrg/vim-c-cpp-modern.git
