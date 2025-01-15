@@ -57,18 +57,18 @@ filetype plugin on
 filetype indent on
 syntax on
 
-autocmd FileType c,cpp set cindent foldmethod=syntax
-autocmd FileType html set ts=2 sw=2 sts=2
-autocmd FileType json set ts=2 sw=2 sts=2 foldmethod=indent
-autocmd FileType yaml set ts=2 sw=2 sts=2 foldmethod=indent
-autocmd FileType javascript set ts=2 sw=2 sts=2
-autocmd FileType typescript set ts=2 sw=2 sts=2
-autocmd FileType css set ts=2 sw=2 sts=2
-autocmd FileType scss set ts=2 sw=2 sts=2
-autocmd FileType python set foldmethod=indent
-autocmd FileType tex set ts=2 sw=2 sts=2
-autocmd FileType bib set ts=2 sw=2 sts=2
-autocmd FileType gitconfig set noet
+autocmd FileType c,cpp setl ts=8 cindent foldmethod=syntax
+autocmd FileType html setl ts=2 sw=2 sts=2
+autocmd FileType json setl ts=2 sw=2 sts=2 foldmethod=indent
+autocmd FileType yaml setl ts=2 sw=2 sts=2 foldmethod=indent
+autocmd FileType javascript setl ts=2 sw=2 sts=2
+autocmd FileType typescript setl ts=2 sw=2 sts=2
+autocmd FileType css setl ts=2 sw=2 sts=2
+autocmd FileType scss setl ts=2 sw=2 sts=2
+autocmd FileType python setl foldmethod=indent
+autocmd FileType tex setl ts=2 sw=2 sts=2
+autocmd FileType bib setl ts=2 sw=2 sts=2
+autocmd FileType gitconfig setl noet
 
 " Enable automatic header/source switching
 autocmd BufEnter *.cpp,*.c,*.h nnoremap <silent> <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.c$,.h,:s,.X123X$,.cpp,<CR>
