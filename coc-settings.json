@@ -7,7 +7,7 @@
   "coc-ai.chat.populatesOptions": true,
   "coc-ai.chat.preserveFocus": true,
   "coc-ai.chat.openChatCommand": "preset_right",
-  "coc-ai.global.rolesConfigPath": "~/.vim/vimrc.d/coc-ai-roles.ini",
+  "coc-ai.global.rolesConfigPath": "~/.vim/vimrc.d/coc-ai-roles.toml",
   "hover.floatConfig": {"border": true, "rounded": true},
   "javascript.preferGoToSourceDefinition": true,
   "markdown-preview-enhanced.previewTheme": "monokai.css",
