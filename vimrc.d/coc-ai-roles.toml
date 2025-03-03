@@ -17,19 +17,25 @@ prompt = """\
 [r1]
 [r1.options]
 model = "deepseek-reasoner"
+endpointUrl = "https://api.deepseek.com/v1/chat/completions"
+requiresAuth = true
+tokenPath = "~/.vim/token.ds"
+maxTokens = 4096
 temperature = 0.6
-requestTimeout = 20
 initialPrompt = ""
 
 [fw-v3]
 [fw-v3.options]
 model = "accounts/fireworks/models/deepseek-v3"
 endpointUrl = "https://api.fireworks.ai/inference/v1/chat/completions"
+requiresAuth = true
+tokenPath = "~/.vim/token.fw"
 
 [fw-r1]
 [fw-r1.options]
 model = "accounts/fireworks/models/deepseek-r1"
 endpointUrl = "https://api.fireworks.ai/inference/v1/chat/completions"
+requiresAuth = true
+tokenPath = "~/.vim/token.fw"
 temperature = 0.6
-requestTimeout = 20
 initialPrompt = ""
