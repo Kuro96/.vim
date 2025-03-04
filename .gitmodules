@@ -31,3 +31,6 @@
 [submodule "pack/vendor/start/vim-c-cpp-modern"]
 	path = pack/vendor/start/vim-c-cpp-modern
 	url = https://github.com/bfrg/vim-c-cpp-modern.git
+[submodule "pack/vendor/start/vim-log-highlighting"]
+	path = pack/vendor/start/vim-log-highlighting
+	url = https://github.com/MTDL9/vim-log-highlighting.git
