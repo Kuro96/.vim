@@ -24,12 +24,21 @@ maxTokens = 4096
 temperature = 0.6
 initialPrompt = ""
 
+[4om]
+[4om.options]
+model = "gpt-4o-mini"
+endpointUrl = "https://api.openai.com/v1/chat/completions"
+requiresAuth = true
+tokenPath = "~/.vim/token.oa"
+proxy = "http://127.0.0.1:1081"
+
 [fw-v3]
 [fw-v3.options]
 model = "accounts/fireworks/models/deepseek-v3"
 endpointUrl = "https://api.fireworks.ai/inference/v1/chat/completions"
 requiresAuth = true
 tokenPath = "~/.vim/token.fw"
+proxy = "http://127.0.0.1:1081"
 
 [fw-r1]
 [fw-r1.options]
@@ -37,5 +46,6 @@ model = "accounts/fireworks/models/deepseek-r1"
 endpointUrl = "https://api.fireworks.ai/inference/v1/chat/completions"
 requiresAuth = true
 tokenPath = "~/.vim/token.fw"
+#proxy = "http://127.0.0.1:1081"
 temperature = 0.6
 initialPrompt = ""
