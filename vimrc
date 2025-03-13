@@ -57,6 +57,12 @@ filetype plugin on
 filetype indent on
 syntax on
 
+" Cursor
+let &t_EI = "\e[2 q" " normal/visual
+let &t_SI = "\e[6 q" " insert
+let &t_SR = "\e[4 q" " replace
+autocmd VimLeave * silent !echo -ne "\e[2 q"
+
 autocmd FileType c,cpp          setl ts=8 cindent foldmethod=syntax
 autocmd FileType html           setl ts=2 sw=2 sts=2
 autocmd FileType json           setl ts=2 sw=2 sts=2 foldmethod=indent
@@ -79,6 +85,16 @@ colorscheme monokai
 if has("termguicolors")
     set termguicolors
 endif
+
+" Misc
+if executable('rg')
+    set grepprg=rg\ --vimgrep\ $*
+    set grepformat=%f:%l:%c:%m
+endif
+
+autocmd QuickFixCmdPost grep copen
+nnoremap <leader>co :copen<cr>
+nnoremap <leader>ccl :cclose<cr>
 
 " Custom Functions
 function! s:syntax_query() abort

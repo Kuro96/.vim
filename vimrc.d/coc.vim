@@ -161,6 +161,12 @@ autocmd FileType markdown nnoremap <buffer> <C-\> :CocCommand markdown-preview-e
 " for more configurations, refer to :h coc-configuration or
 " https://github.com/neoclide/coc.nvim?tab=readme-ov-file#example-vim-configuration
 
+nnoremap <leader>rr :CocRestart<cr>
+nnoremap <leader>rl :CocOpenLog<cr>
+
+" coc-json
+nnoremap <leader>js :CocCommand json.sort<cr>
+
 " coc-ai
 xnoremap <leader>c :AIChat<CR>
 nnoremap <leader>c :AIChat<CR>
