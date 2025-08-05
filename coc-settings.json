@@ -2,7 +2,7 @@
   "coc-ai.global.model": "deepseek-chat",
   "coc-ai.global.endpointUrl": "https://api.deepseek.com/v1/chat/completions",
   "coc-ai.global.tokenPath": "~/.vim/token",
-  "coc-ai.chat.autoScroll": true,
+  "coc-ai.chat.autoScroll": false,
   "coc-ai.chat.scratchBufferKeepOpen": false,
   "coc-ai.chat.populatesOptions": true,
   "coc-ai.chat.preserveFocus": true,

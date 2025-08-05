@@ -511,3 +511,6 @@ else
         \ s:br_cyan.gui,
         \ s:br_white.gui]
 endif
+
+" coc lsp
+call s:h("CocInlayHint",   {                     "bg": s:lightblack2 })
