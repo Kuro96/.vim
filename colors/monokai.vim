@@ -70,7 +70,7 @@ endfunction
 " Palettes
 " --------
 
-let s:white       = { "gui": "#E8E8E3", "cterm": "252" }
+let s:white       = { "gui": "#F8F8F2", "cterm": "252" }
 let s:white2      = { "gui": "#d8d8d3", "cterm": "250" }
 let s:black       = { "gui": "#272822", "cterm": "234" }
 let s:lightblack  = { "gui": "#2D2E27", "cterm": "235" }
@@ -81,6 +81,9 @@ let s:grey        = { "gui": "#8F908A", "cterm": "243" }
 let s:lightgrey   = { "gui": "#575b61", "cterm": "237" }
 let s:darkgrey    = { "gui": "#64645e", "cterm": "239" }
 let s:warmgrey    = { "gui": "#75715E", "cterm": "59" }
+
+let s:selection   = { "gui": "#49483E", "cterm": "237" }
+let s:line        = { "gui": "#3E3D32", "cterm": "236" }
 
 let s:pink        = { "gui": "#F92772", "cterm": "197" }
 let s:green       = { "gui": "#A6E22D", "cterm": "148" }
@@ -115,11 +118,11 @@ call s:h("Normal",        { "fg": s:white,      "bg": s:black })
 call s:h("ColorColumn",   {                     "bg": s:lightblack })
 call s:h("Conceal",       { "fg": s:lightblack2 })
 call s:h("Cursor",        { "fg": s:black,      "bg": s:white })
-call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
-call s:h("CursorLine",    {                     "bg": s:lightblack2 })
+call s:h("CursorColumn",  {                     "bg": s:line })
+call s:h("CursorLine",    {                     "bg": s:line })
 call s:h("NonText",       { "fg": s:lightblack2 })
 call s:h("Whitespace",    { "fg": s:lightblack2 })
-call s:h("Visual",        {                     "bg": s:lightgrey })
+call s:h("Visual",        {                     "bg": s:selection })
 call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
 call s:h("MatchParen",    { "fg": s:purple,                           "format": "underline,bold" })
 call s:h("Question",      { "fg": s:yellow })
@@ -186,7 +189,7 @@ call s:h("String",        { "fg": s:yellow })
 
 call s:h("Type",          { "fg": s:aqua })
 call s:h("Structure",     { "fg": s:aqua })
-call s:h("StorageClass",  { "fg": s:aqua })
+call s:h("StorageClass",  { "fg": s:aqua, "format": "italic" })
 call s:h("Typedef",       { "fg": s:aqua })
     
 call s:h("Identifier",    { "fg": s:green })
@@ -285,13 +288,23 @@ call s:h("jsStorageClass",      { "fg": s:aqua, "format": "italic" })
 call s:h("jsDocTags",           { "fg": s:aqua,   "format": "italic" })
 call s:h("jsFunction",          { "fg": s:aqua,   "format": "italic" })
 
+" JS Punctuation (Sublime style is White, not Pink)
+call s:h("jsNoise",             { "fg": s:white })
+call s:h("jsBrackets",          { "fg": s:white })
+call s:h("jsParens",            { "fg": s:white })
+call s:h("jsBraces",            { "fg": s:white })
+call s:h("jsFuncBraces",        { "fg": s:white })
+call s:h("jsFuncParens",        { "fg": s:white })
+call s:h("jsClassBraces",       { "fg": s:white })
+call s:h("jsClassNoise",        { "fg": s:white })
+
 " Typescript
 call s:h("typescriptBraces",              { "fg": s:white })
 call s:h("typescriptParens",              { "fg": s:white })
 call s:h("typescriptOperator",            { "fg": s:pink })
 call s:h("typescriptEndColons",           { "fg": s:white })
-call s:h("typescriptModule",              { "fg": s:aqua })
-call s:h("typescriptPredefinedType",      { "fg": s:aqua })
+call s:h("typescriptModule",              { "fg": s:aqua, "format": "italic" })
+call s:h("typescriptPredefinedType",      { "fg": s:aqua, "format": "italic" })
 call s:h("typescriptImport",              { "fg": s:pink })
 call s:h("typescriptExport",              { "fg": s:pink })
 call s:h("typescriptIdentifier",          { "fg": s:orange, "format": "italic" })
@@ -299,7 +312,7 @@ call s:h("typescriptVariable",            { "fg": s:aqua })
 call s:h("typescriptCastKeyword",         { "fg": s:pink })
 call s:h("typescriptAmbientDeclaration",  { "fg": s:pink })
 call s:h("typescriptTestGlobal",          { "fg": s:pink })
-call s:h("typescriptFuncKeyword",         { "fg": s:aqua })
+call s:h("typescriptFuncKeyword",         { "fg": s:aqua, "format": "italic" })
 call s:h("typescriptFuncTypeArrow",       { "fg": s:aqua })
 call s:h("typescriptFuncType",            { "fg": s:orange, "format": "italic" })
 call s:h("typescriptFuncName",            { "fg": s:green })
@@ -414,11 +427,37 @@ call s:h("erubyRailsMethod",            { "fg": s:aqua })
 
 " c
 call s:h("cLabel",                      { "fg": s:pink })
-call s:h("cStructure",                  { "fg": s:aqua })
-call s:h("cStorageClass",               { "fg": s:pink })
+call s:h("cStructure",                  { "fg": s:aqua, "format": "italic" })
+call s:h("cStorageClass",               { "fg": s:pink, "format": "italic" })
 call s:h("cInclude",                    { "fg": s:pink })
 call s:h("cDefine",                     { "fg": s:pink })
 call s:h("cSpecial",                    { "fg": s:purple })
+
+" JSON
+call s:h("jsonKeyword",                 { "fg": s:purple })
+call s:h("jsonString",                  { "fg": s:yellow })
+call s:h("jsonQuote",                   { "fg": s:white })
+call s:h("jsonNoise",                   { "fg": s:white })
+call s:h("jsonBraces",                  { "fg": s:white })
+
+" YAML
+call s:h("yamlKey",                     { "fg": s:aqua })
+call s:h("yamlConstant",                { "fg": s:purple })
+call s:h("yamlString",                  { "fg": s:yellow })
+call s:h("yamlBlockMappingKey",         { "fg": s:aqua })
+
+" TOML
+call s:h("tomlTable",                   { "fg": s:pink })
+call s:h("tomlKey",                     { "fg": s:aqua })
+call s:h("tomlString",                  { "fg": s:yellow })
+call s:h("tomlBoolean",                 { "fg": s:purple })
+
+" C++ (vim-c-cpp-modern specific)
+call s:h("cppStructure",                { "fg": s:aqua, "format": "italic" })
+call s:h("cppModifier",                 { "fg": s:pink, "format": "italic" })
+call s:h("cppAccess",                   { "fg": s:pink })
+call s:h("cppType",                     { "fg": s:aqua, "format": "italic" })
+call s:h("cppSTLtype",                  { "fg": s:aqua, "format": "italic" })
 
 " Markdown
 call s:h("markdownCode",       { "fg": s:purple, "format": "italic" } )
@@ -453,6 +492,7 @@ call s:h('pythonSelf',                  { 'fg': s:orange, 'format': 'italic' })
 " XXX: pythonStatement covers a bit too much...unfortunately, this means that
 " some keywords, like `def`, can't be highlighted like in Sublime yet.
 call s:h('pythonStatement',             { 'fg': s:pink         })
+call s:h('pythonDefinition',            { 'fg': s:aqua, 'format': 'italic' })
 call s:h('pythonStrFormat',             { 'fg': s:purple       })
 call s:h('pythonRun',                   { 'fg': s:warmgrey     })
 " XXX: Other known deficiencies:

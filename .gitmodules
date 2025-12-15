@@ -34,3 +34,6 @@
 [submodule "pack/vendor/start/vim-log-highlighting"]
 	path = pack/vendor/start/vim-log-highlighting
 	url = https://github.com/MTDL9/vim-log-highlighting.git
+[submodule "pack/vendor/start/yats.vim"]
+	path = pack/vendor/start/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git
