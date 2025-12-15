@@ -113,11 +113,12 @@ let s:br_white    = { "gui": "#FFFFFF" }
 " editor
 call s:h("Normal",        { "fg": s:white,      "bg": s:black })
 call s:h("ColorColumn",   {                     "bg": s:lightblack })
-call s:h("Conceal",       { "fg": s:lightgrey })
+call s:h("Conceal",       { "fg": s:lightblack2 })
 call s:h("Cursor",        { "fg": s:black,      "bg": s:white })
 call s:h("CursorColumn",  {                     "bg": s:lightblack2 })
 call s:h("CursorLine",    {                     "bg": s:lightblack2 })
-call s:h("NonText",       { "fg": s:lightgrey })
+call s:h("NonText",       { "fg": s:lightblack2 })
+call s:h("Whitespace",    { "fg": s:lightblack2 })
 call s:h("Visual",        {                     "bg": s:lightgrey })
 call s:h("Search",        { "fg": s:black,      "bg": s:yellow })
 call s:h("MatchParen",    { "fg": s:purple,                           "format": "underline,bold" })
@@ -149,7 +150,7 @@ call s:h("SpellRare",     { "fg": s:aqua,                             "format": 
 call s:h("SpellLocal",    { "fg": s:pink,                             "format": "underline" })
 
 " misc
-call s:h("SpecialKey",    { "fg": s:pink })
+call s:h("SpecialKey",    { "fg": s:lightblack2 })
 call s:h("Title",         { "fg": s:yellow })
 call s:h("Directory",     { "fg": s:aqua })
 
@@ -513,4 +514,4 @@ else
 endif
 
 " coc lsp
-call s:h("CocInlayHint",   {                     "bg": s:lightblack2 })
+call s:h("CocInlayHint",   { "fg": s:lightblack2                     })
