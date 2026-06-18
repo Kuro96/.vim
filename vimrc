@@ -1,3 +1,6 @@
+let g:theme_mode = 'light'
+"let g:theme_mode = 'dark'
+
 " General Settings
 set nocompatible
 set modeline modelines=5
@@ -81,11 +84,14 @@ autocmd FileType make           setl noet
 autocmd BufEnter *.cpp,*.c,*.h nnoremap <silent> <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.c$,.h,:s,.X123X$,.cpp,<CR>
 
 " Color Scheme
-let g:monokai_term_italic = 1
-let g:monokai_gui_italic = 1
-colorscheme monokai
 if has("termguicolors")
     set termguicolors
+endif
+
+if g:theme_mode ==# 'dark'
+    colorscheme monokai
+else
+    colorscheme warm_editorial
 endif
 
 " Misc
