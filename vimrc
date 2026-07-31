@@ -1,5 +1,8 @@
 let g:theme_mode = 'light'
-"let g:theme_mode = 'dark'
+let s:theme_mode_file = expand('~/.vim/theme.local.vim')
+if filereadable(s:theme_mode_file)
+    execute 'source ' . fnameescape(s:theme_mode_file)
+endif
 
 " General Settings
 set nocompatible
@@ -88,11 +91,14 @@ if has("termguicolors")
     set termguicolors
 endif
 
-if g:theme_mode ==# 'dark'
-    colorscheme monokai
-else
-    colorscheme warm_editorial
-endif
+function! s:apply_theme() abort
+    let g:airline_theme = g:theme_mode ==# 'dark' ? 'base16_monokai' : 'warm_editorial'
+    execute 'colorscheme ' . (g:theme_mode ==# 'dark' ? 'monokai' : 'warm_editorial')
+    if exists(':AirlineTheme')
+        execute 'AirlineTheme ' . g:airline_theme
+    endif
+endfunction
+call s:apply_theme()
 
 " Misc
 if executable('rg')
@@ -121,6 +127,21 @@ for f in globpath('~/.vim/vimrc.d', '*.vim', 0, 1)
         execute 'source ' . fnameescape(f)
     endif
 endfor
+
+function! s:refresh_theme() abort
+    let l:previous_mode = g:theme_mode
+    if filereadable(s:theme_mode_file)
+        execute 'source ' . fnameescape(s:theme_mode_file)
+    endif
+    if g:theme_mode !=# l:previous_mode
+        call s:apply_theme()
+    endif
+endfunction
+
+augroup local_theme
+    autocmd!
+    autocmd FocusGained * call <SID>refresh_theme()
+augroup END
 
 " Temporary Vim Scripts
 if filereadable(expand('~/.vim/tmprc'))
