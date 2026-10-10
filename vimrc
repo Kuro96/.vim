@@ -63,6 +63,8 @@ filetype plugin on
 filetype indent on
 syntax on
 
+autocmd BufRead,BufNewFile *.j2,*.jinja,*.jinja2 setfiletype jinja
+
 " Cursor
 let &t_EI = "\e[2 q" " normal/visual
 let &t_SI = "\e[6 q" " insert
