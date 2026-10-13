@@ -1,5 +1,5 @@
 {
-  "coc-ai.global.model": "deepseek-v4-pro",
+  "coc-ai.global.model": "deepseek-flash",
   "coc-ai.global.endpointUrl": "https://api.deepseek.com/v1/chat/completions",
   "coc-ai.global.thinking": {"type": "enabled"},
   "coc-ai.global.reasoningEffort": "high",
